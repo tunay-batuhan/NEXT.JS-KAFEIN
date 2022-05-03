@@ -1,0 +1,41 @@
+.cardDetail {
+    border-radius: 5%;
+    box-shadow: 0 4px 8px 0 rgba(246, 248, 244, 0.87);
+    padding: 10px;
+    background-color: rgb(182, 114, 114);
+    .cardImg {
+        img {
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 5%;
+        }
+    }
+    .cardTitle {
+        .title {
+            display: flex;
+            font-size: 38px;
+            margin-bottom: 10px;
+            color: aqua;
+            p {
+                margin: 0;
+            }
+        }
+    }
+    .cardContent {
+        .title {
+            font-size: 32px;
+            margin: 0;
+        }
+    }
+    .list {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+        li {
+            margin-right: 10px;
+            display: flex;
+            font-size: 12px;
+        }
+    }
+}
