@@ -8,6 +8,10 @@ export default function header() {
   const { searchData, setSearchData } = useContext(SearchData);
   const [historyData, setHistoryData] = React.useState([]);
 
+  React.useEffect(() => {
+    let x = JSON.parse(localStorage.getItem("inputHistory"));
+    setHistoryData(x.reverse());
+  }, [setHistoryData]);
   const setInputHistory = (inputvalue) => {
     let x = JSON.parse(localStorage.getItem("inputHistory"));
     if (x != null && x.includes(inputvalue)) return false;
@@ -26,7 +30,6 @@ export default function header() {
     if (!textInput.current.value) return false;
     let inputvalue = textInput.current.value;
     setInputHistory(inputvalue);
-
     const fetchData = async () => {
       const SearchUrl = `https://api.themoviedb.org/3/search/movie?api_key=${ApiKey}&query=${inputvalue}`;
       const res = await fetch(SearchUrl);
@@ -54,8 +57,8 @@ export default function header() {
             />
           </label>
           <datalist id="history">
-            {historyData.map((item) => {
-              return <option value={item} />;
+            {historyData.map((item, index) => {
+              return <option className="my-option" value={item} key={index} />;
             })}
           </datalist>
           <Link href="/">

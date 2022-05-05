@@ -21,8 +21,7 @@ export default function inComing() {
   }
   return (
     <div className="InCaming">
-      <h2 className="title">Incoming movies</h2>
-
+      <h2 className="title text-center">Incoming movies</h2>
       <ul className="item">
         {newdata.map((item, index) => {
           return (

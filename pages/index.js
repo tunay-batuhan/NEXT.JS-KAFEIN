@@ -23,9 +23,9 @@ export default function Home() {
   return (
     <div className="row">
       {!id && searchData.length == 0 ? (
-        <h1 className="mb-5">Popular Movies</h1>
+        <h1 className="title">Popular Movies</h1>
       ) : (
-        ""
+        <h1 className="title">Recommended Movies</h1>
       )}
       {!newdata ? (
         <h2>Loading...</h2>

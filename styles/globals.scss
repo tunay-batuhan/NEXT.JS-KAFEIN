@@ -16,3 +16,13 @@ a {
 * {
   box-sizing: border-box;
 }
+.title {
+  margin-bottom: 16px;
+  background-image: linear-gradient(to right, rgb(30, 213, 169) 0%, rgb(9 111 139) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text {
+  font-family: monospace;
+}

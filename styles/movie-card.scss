@@ -30,13 +30,10 @@
     border: 1px solid white;
     box-shadow: 0 4px 8px 0 rgba(246, 248, 244, 0.87);
     border-radius: 20px;
-    background-color: white;
     color: black;
     padding: 10px;
-    .title {
-        text-align: center;
-        margin-bottom: 16px;
-    }
+    background: linear-gradient(to right, #20456a 0%, #102336 100%);
+
     .item {
         margin: 0;
         padding: 0;
@@ -47,11 +44,16 @@
             display: flex;
             justify-content: space-between;
             border: 1px solid #007bff;
-            background-color: rgba(0, 0, 0, 0.3);
-            border-radius: 5px;
-            padding: 5px 10px;
+            background: linear-gradient(to right, rgb(13 116 92) 0%, rgb(9 96 120) 100%);
+            border-radius: 27px;
+            padding: 10px 15px;
             margin-bottom: 8px;
-
+            align-items: center;
+            color: #e9e0e0;
+            font-weight: bold;
+            span {
+                max-width: 90%;
+            }
             &:hover {
                 background-color: white;
                 color: aqua;
