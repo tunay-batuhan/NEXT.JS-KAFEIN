@@ -10,8 +10,9 @@ export default function header() {
 
   React.useEffect(() => {
     let x = JSON.parse(localStorage.getItem("inputHistory"));
-    setHistoryData(x.reverse());
+    x !== null ? setHistoryData(x.reverse()) : false;
   }, [setHistoryData]);
+
   const setInputHistory = (inputvalue) => {
     let x = JSON.parse(localStorage.getItem("inputHistory"));
     if (x != null && x.includes(inputvalue)) return false;
